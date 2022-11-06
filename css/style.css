@@ -762,6 +762,14 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
+
+#p-span{
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 @media (max-width:1199px)
 {
     .section .container
