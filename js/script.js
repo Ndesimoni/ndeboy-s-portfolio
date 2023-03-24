@@ -98,7 +98,7 @@ simonisubmit_btn.addEventListener("click", (e) => {
         Subject: simoni_subject,
         Body: simoni_body
     }).then(
-        message => alert(`thanks for sending contacting  ${simoni_name} please use the email NDESIMONICHE@GMAIL.COM the form has some tehnical issues our team is working on it`)
+        message => alert(`thanks for contacting  ${simoni_name} please use the email NDESIMONICHE@GMAIL.COM the form has some tehnical issues our team is working on it`)
     );
 
     // Email.send({
