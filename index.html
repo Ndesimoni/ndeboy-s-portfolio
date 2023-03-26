@@ -69,9 +69,6 @@
                                 <a href="./nde_simoni-resume/My_resume.pdf"
                                     download="./nde_simoni-resume/My_resume.pdf"
                                     class="btn">Download CV</a>
-
-                                <a href="./nde_simoni-resume/My_resume2.pdf"
-                                    class="btn btn-simoni">My Certificate</a>
                             </div>
                             <div class="home-img padd-15">
                                 <img src="images/nde-boy1.jpg" alt="">
@@ -137,14 +134,16 @@
                                                 <p>City : <span>Dubai</span></p>
                                             </div>
                                             <div class="info-item padd-15">
-                                                <p>Freelanace : <span>Available</span></p>
+                                                <p>Freelance : <span>Available</span></p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="buttons padd-15">
-                                                <a href="#contact"
+                                                <a
+                                                    href="./nde_simoni-resume/My_resume2.pdf"
                                                     data-section-index="1"
-                                                    class="btn hire-me">Hire Me</a>
+                                                    class="btn hire-me">My
+                                                    Certificate</a>
                                             </div>
                                         </div>
                                     </div>
@@ -357,7 +356,7 @@
                                                             PPC </p>
                                                         <p
                                                             class="timeline-text">
-                                                            Excelen in
+                                                            Excellent in
                                                             researching </p>
                                                         <p
                                                             class="timeline-text">
@@ -626,7 +625,8 @@
                                             <input type="text"
                                                 id="simoni_name"
                                                 class="form-control"
-                                                placeholder="Name">
+                                                placeholder="Name"
+                                                required>
                                         </div>
                                     </div>
                                     <div class="form-item col-6 padd-15">
@@ -635,7 +635,8 @@
                                             <input type="email"
                                                 id="simoni_email"
                                                 class="form-control"
-                                                placeholder="Email">
+                                                placeholder="Email"
+                                                required>
                                         </div>
                                     </div>
                                 </div>
@@ -646,7 +647,8 @@
                                             <input type="text"
                                                 class="form-control"
                                                 id="simoni_subject"
-                                                placeholder="Subject">
+                                                placeholder="Subject"
+                                                required>
                                         </div>
                                     </div>
                                 </div>
@@ -657,7 +659,8 @@
                                             <textarea name=""
                                                 class="form-control"
                                                 id="simoni_message"
-                                                placeholder="Message"></textarea>
+                                                placeholder="Message"
+                                                required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -665,7 +668,7 @@
                                     <!-- i made changes to this btn -->
                                     <div class="form-item col-12 padd-15">
                                         <button type="submit" class="btn"
-                                            id="simon_submit">Send
+                                            onclick="sendmail()">Send
                                             Message</button>
                                     </div>
                                 </div>
@@ -698,9 +701,15 @@
         <!-- ===== Style Switcher End ===== -->
         <!-- ===== JS Files ===== -->
 
-        <!-- i added this javascript link -->
-        <script src="https://smtpjs.com/v3/smtp.js">
-        </script>
+        <!-- i added this javascript link for form js-->
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+
+        emailjs.init('0cajzeCq2_vg_Y7Yz')
+      </script>
+        <!-- /////////////////////// -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
             referrerpolicy="no-referrer"></script>

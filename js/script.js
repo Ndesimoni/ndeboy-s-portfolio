@@ -78,47 +78,23 @@ function asideSectionTogglerBtn() {
 // this are the changes that i have added my self for the form submite
 
 
-let simonisubmit_btn = document.getElementById("simon_submit")
-simonisubmit_btn.addEventListener("click", (e) => {
-    e.preventDefault()
-    let simoni_name = document.getElementById("simoni_name").value;
-    let simoni_email = document.getElementById("simoni_email").value;
-    let simoni_subject = document.getElementById("simoni_subject").value;
-    let simoni_message = document.getElementById("simoni_message").value;
-
-    let simoni_body = `simoni_name ${simoni_name} <br/> simoni_email ${simoni_email}<br/> simoni_subject ${simoni_subject}<br/> simoni_message ${simoni_message}`
 
 
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username: "ndesimoniche@gmail.com",
-        Password: "vohknuxmrukyocwf",
-        To: 'ndesimoniche@gmail.com',
-        From: simoni_email,
-        Subject: simoni_subject,
-        Body: simoni_body
-    }).then(
-        message => alert(`thanks for contacting  ${simoni_name} please use the email NDESIMONICHE@GMAIL.COM the form has some tehnical issues our team is working on it`)
-    );
-
-    // Email.send({
-    //     SecureToken: "c65a88e8-bb23-41a8-995e-607de04269a8",
-    //     To: 'ndesimoniche@gmail.com',
-    //     From: simoni_email,
-    //     Subject: simoni_subject,
-    //     Body: simoni_body
-    // }).then(
-    //     message => alert(message)
-    // );
-
-})
-
-// vohknuxmrukyocwf
-
-// smpt password
-// D4CBCE2C6BEB9FD0EF62C0D92CF09C051FC7
+const btn = document.getElementById('button');
 
 
-// security key
+function sendmail() {
+    let params = {
+        from_name: document.getElementById("simoni_name").value,
+        email_id: document.getElementById("simoni_email").value,
+        subject: document.getElementById("simoni_subject").value,
+        message: document.getElementById("simoni_message").value
+    }
+    emailjs.send("contact", "contact_form", params).then(function (res) {
+        alert("success!" + res.status);
+    })
 
-// c65a88e8-bb23-41a8-995e-607de04269a8 
+
+}
+
+
